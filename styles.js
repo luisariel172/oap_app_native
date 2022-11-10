@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    container: {
+  //estilos contenedor principal
+  container: {
         flex: 1,
         backgroundColor: '#F6F4F5',
       },
@@ -13,25 +14,26 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
       },
-
+      //estilos del input
       input: {
         width: '80%',
         borderBottomWidth: 1,
         borderBottomColor: '#9A848F',
       },
-      
+
       //contenedor de la lista
       listContainer: {
         marginHorizontal: 20,
       },
-
+      //estilos del titulo
       listTitle: {
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: 'bold',
         marginBottom: 10,
         color: '#212121',
       },
       
+      //estilos para cada item
       listItemContainer: {
         paddingVertical: 20,
         backgroundColor: '#9A8484',
@@ -52,5 +54,4 @@ export const styles = StyleSheet.create({
         color: '#ffffff',
         paddingHorizontal: 10,
       },
-
 });
