@@ -5,9 +5,7 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#F6F4F5',
       },
-      //greeting:{
-      //  margin: 20,
-      //},
+      
       //contenedor del input y boton add
       inputContainer: {
         marginHorizontal: 20,
@@ -28,7 +26,6 @@ export const styles = StyleSheet.create({
       },
 
       listTitle: {
-         
         fontSize: 18,
         fontWeight: 'bold',
         marginBottom: 10,
@@ -37,7 +34,7 @@ export const styles = StyleSheet.create({
       
       listItemContainer: {
         paddingVertical: 20,
-        backgroundColor: '#9A848F',
+        backgroundColor: '#9A8484',
         borderRadius: 5,
         marginVertical: 5,
         shadowColor: "#000",
