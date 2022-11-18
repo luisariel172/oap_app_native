@@ -1,7 +1,8 @@
 
 import { useState } from 'react';
 import {View, TextInput, Button, Text, FlatList, Modal, TouchableOpacity } from 'react-native';
-import { styles } from './styles';
+import { styles } from '../styles';
+import { AddItem } from './components/index';
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
 
   //fn para el boton Add
   const onHandleTask = () => {
+    console.log('asdfasdfadsfasf');
     /*//Forma 1: La mas sencilla, con spread operator hago una copia de la lista y le agrego el valor del estado actual de lo que escribi en el campo
     //asi voy añadiendo elementos a la lista
     setTaskList ([...taskList, task]);*/
@@ -51,18 +53,12 @@ export default function App() {
       setTaskList ((prevTaskList) => prevTaskList.filter( (item) => item.id !== selectedTask.id) )
       setModalVisible(!modalVisible)
     }
+
+    const onHandleChange = (text) => setTask(text);
+
   return (
     <View style={styles.container}>
-      <View style={styles.inputContainer}>
-        <TextInput 
-          style={styles.input}
-          value={task}
-          //seteo al state task el elemento que escribo dentro del campo
-          placeholder="Ingrese una tarea"
-          onChangeText={text => setTask(text)}
-        />
-        <Button  disabled={!task} title='Add' color='#9A848F' onPress={onHandleTask} />
-      </View>
+      <AddItem task={task} onHandleTask={onHandleTask} onHandleChange={onHandleChange} />
       
       <View style={styles.listContainer}>
       <Text style={styles.listTitle}>ToDo List</Text>
